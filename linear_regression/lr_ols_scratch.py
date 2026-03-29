@@ -7,7 +7,7 @@
 
 import numpy as np
 
-class LinearRegressionScratch:
+class LinearRegressionOLS:
     def __init__(self):
         self.weights = None
         self.bias = None
@@ -98,7 +98,7 @@ if __name__ == "__main__":
     # After training, learned values should be close to these
     y = 3 * X[:, 0] + 2 * X[:, 1] + 7 + np.random.randn(100) * 2
 
-    lr = LinearRegressionScratch()
+    lr = LinearRegressionOLS()
     lr.fit(X, y)
 
     print("Learned weights:", lr.weights)   # should be close to [3, 2]
